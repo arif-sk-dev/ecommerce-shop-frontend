@@ -3,32 +3,15 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); //handle scroll header shadow
 
   //header Scrolling drop Shadow & bg color
   useEffect(() => {
       const changeNavbar = () => {
         setIsScrolled(window.scrollY > 50);
       };
-  
       window.addEventListener("scroll", changeNavbar);
     }, []);
-
-
-  // useEffect (()=> {
-  //   const handleScroll = ()=> {
-  //     if(window.scrollY > 50) {
-  //       setIsScrolled(true);
-  //     } else {
-  //       setIsScrolled(false);
-  //     }
-  //   }
-
-  //   window.addEventListener('scroll', handleScroll);
-  //   return ()=> {
-  //     window.addEventListener('scroll', handleScroll);
-  //   }
-  // }, []);
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 py-1 transition duration-300 ease-in-out ${

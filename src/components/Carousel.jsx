@@ -32,16 +32,19 @@ const Carousel = () => {
           return (
             <div
               key={index}
-              className="bg-gradient-to-r from-[#006e6e] via-[#00a896] to-[#40e0d0] py-4 px-4">
-                <div className="container flex flex-row gap-10 justify-center max-w-[1280px] mx-auto md:h-[70vh] lg:h-[70vh] sm:h-[70vh] items-center px-4">
+              // className="container bg-gradient-to-r from-[#006e6e] via-[#00a896] to-[#40e0d0] py-4 w-screen md:h-[70vh] lg:h-[70vh] h-[40vh]">
+              className="container bg-zinc-200 py-4 w-screen md:h-[70vh] lg:h-[70vh] h-[40vh]">
+                <div className="flex flex-cols-4 gap-10 justify-between mx-auto  items-center px-4">
                   <div className="space-y-6 flex-3 items-center">
-                    <h3 className="text-white lg:text-4xl md:text-2xl sm:text-[16px] [text-shadow:0_0_5px_black] font-semibold mx-auto text-center">Brighten Your World With The Best Fashion!</h3>
-                    <h1 className="text-red-200 md:text-4xl sm:text-2xl [text-shadow:0_0_5px_black] mx-auto text-center">{item.title}</h1>
+                    <h3 className="bg-gradient-to-r from-[#470165] via-[#049385] to-[#880e05]     bg-clip-text text-transparent lg:text-4xl md:text-2xl sm:text-[16px] font-bold mx-auto">Brighten Your World With The Best Fashion!</h3>
+                    <h1 className="bg-gradient-to-r from-[#030caf] via-[#940404] to-[#02681b]     bg-clip-text text-transparent md:text-4xl sm:text-2xl font-bold mx-auto">{item.title}</h1>
                     {/* <h1 className="container sm:hidden md:block font-semibold text-zinc-800">{item.description}</h1> */}
-                    <button className="bg-gradient-to-r from-[#006e6e] via-[#00a896] to-[#40e0d0] text-white border-1 px-3 py-2 rounded-[5px] cursor-pointer">Shop Now</button>
+                    <div>
+                      <button className="bg-gradient-to-r from-[#006e6e] via-[#00a896] to-[#40e0d0] text-white border-1 px-3 py-2 rounded-[5px] cursor-pointer">Shop Now</button>
+                    </div>
                   </div>
                   <div className="flex-1">
-                    <img src={item.image} className="container w-[100%] md:h-[60vh] lg:h-[60vh] sm:h-[60vh] mx-auto dark-drop-shadow-lg" />
+                    <img src={item.image} className="w-[100%] md:h-[60vh] lg:h-[60vh] sm:h-[60vh] mx-auto dark-drop-shadow-lg" />
                   </div>
                 </div>
             </div>

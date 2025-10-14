@@ -3,6 +3,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { DataContext } from "../context/DataContext";
+import { Autoplay } from "swiper/modules";
+import { FcNext, FcPrevious } from "react-icons/fc";
 
 const Carousel = () => {
   const { data, fetchAllProducts } = useContext(DataContext);
@@ -13,12 +15,34 @@ const Carousel = () => {
     fetchAllProducts();
   }, [fetchAllProducts]);
 
+  const SamplePrevArrow = (props) => {
+    const {className, style, onClick} = props;
+    return (
+      <div onClick={onclick} className={`arrow ${className}`} style={{zIndex:11}}>
+        <FcPrevious className= "arrows" style={{...style, display:"block", borderRadius: "50px", background: "white", color: "black", position: "absolute", left: "50px"}}/>
+      </div>
+    )
+  }
+
+  const SampleNextArrow = (props) => {
+    const {className, style, onClick} = props;
+    return (
+      <div>
+        <FcNext className= "arrows" />
+      </div>
+    )
+  }
+
   var settings = {
     dots: true,
+    Autoplay:true,
+    autoplaySpeed: 2000,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    NextArrow: <SampleNextArrow to='next' />,
+    prevArrow: <SamplePrevArrow to='prev' />,
   };
 
   if (!data || data.length === 0) {
@@ -26,7 +50,7 @@ const Carousel = () => {
   }
 
   return (
-    <div className="container mt-15">
+    <div className="container mt-15 z-10">
       <Slider {...settings}>
         {data.slice(14, 20).map((item, index) => {
           return (

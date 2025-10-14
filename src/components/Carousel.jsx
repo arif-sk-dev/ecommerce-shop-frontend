@@ -40,11 +40,11 @@ const Carousel = () => {
                     <h1 className="bg-gradient-to-r from-[#030caf] via-[#940404] to-[#02681b]     bg-clip-text text-transparent md:text-4xl sm:text-2xl font-bold mx-auto">{item.title}</h1>
                     {/* <h1 className="container sm:hidden md:block font-semibold text-zinc-800">{item.description}</h1> */}
                     <div>
-                      <button className="bg-gradient-to-r from-[#006e6e] via-[#00a896] to-[#40e0d0] text-white border-1 px-3 py-2 rounded-[5px] cursor-pointer">Shop Now</button>
+                      <button className="bg-gradient-to-r from-[#006e6e] via-[#00a896] to-[#ab0c0c] text-white border-1 px-3 py-2 rounded-[5px] cursor-pointer">Shop Now</button>
                     </div>
                   </div>
                   <div className="flex-1">
-                    <img src={item.image} className="w-[100%] md:h-[60vh] lg:h-[60vh] sm:h-[60vh] mx-auto dark-drop-shadow-lg" />
+                    <img src={item.image} className="w-[100%] md:h-[60vh] lg:h-[60vh] sm:h-[60vh] mx-auto dark-drop-shadow-lg hover:scale-105 transition-all" />
                   </div>
                 </div>
             </div>

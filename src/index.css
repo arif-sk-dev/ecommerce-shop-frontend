@@ -3,3 +3,13 @@
 /* * {
   border: 1px solid red;
 } */
+
+.arrows {
+  height: 40px;
+  width: 40px;
+  font-size: 25px;
+  opacity: 0.5;
+}
+.arrows:hover {
+  opacity: 1;
+}

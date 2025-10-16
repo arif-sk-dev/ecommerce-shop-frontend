@@ -6,7 +6,6 @@ import { getData } from "../context/DataContext";
 import { Autoplay } from "swiper/modules";
 import { FcNext, FcPrevious } from "react-icons/fc";
 import Category from "./Category";
-import MidBanner from "./MidBanner";
 
 const Carousel = () => {
   const { data, fetchAllProducts } = getData();
@@ -77,9 +76,7 @@ const Carousel = () => {
           );
         })}
       </Slider>
-
       <Category />
-      <MidBanner />
     </div>
   );
 };

@@ -8,13 +8,11 @@ import Blog from './pages/blog/Blog';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Footer from "./components/Footer";
-import Carousel from "./components/Carousel";
 
 const MainLayout = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <Carousel />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />

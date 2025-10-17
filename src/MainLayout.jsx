@@ -12,7 +12,7 @@ import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 
 // Support pages import 
-import Faq from "./pages/supportPages/FAQ";
+import FAQ from "./pages/supportPages/FAQ";
 import Returns from "./pages/supportPages/Returns";
 import Privacy from "./pages/supportPages/Privacy";
 import Terms from "./pages/supportPages/Terms";
@@ -30,7 +30,7 @@ const MainLayout = () => {
         <Route path="/contact" element={<Contact />} />
 
         {/* Support routes */}
-        <Route path="/faq" element={<Faq />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/returns" element={<Returns />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />

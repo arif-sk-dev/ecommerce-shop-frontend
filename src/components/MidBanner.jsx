@@ -9,7 +9,7 @@ const MidBanner = () => {
           <div className='text-center text-white px-4 py-10'>
             <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold mt-4 md:mt-10 lg:mt-13'>Next-Gen Fashion & Electronics</h1>
             <p className='text-lg md:text-2xl mt-10 mb-8'>Discover the latest text innovation with unbeatable prices and Free Shipping on selected products—experience cutting-edge design, premium quality, and seamless performance tailored to elevate your everyday workflow.!</p>
-            <button className='bg-red-500 text-white font-semibold px-3 py-2 rounded-lg transition duration-300 hover:bg-red-700 cursor-pointer'>Shop Now</button>
+            <button className="bg-red-400 text-white px-6 py-2 rounded-full hover:bg-red-500 transition border-1 cursor-pointer">Shop Now</button>
           </div>
         </div>
       </div>

@@ -64,9 +64,7 @@ const Carousel = () => {
                     <h3 className="bg-gradient-to-r from-[#470165] via-[#049385] to-[#880e05]     bg-clip-text text-transparent lg:text-4xl md:text-2xl sm:text-[16px] font-bold mx-auto">Brighten Your World With The Best Fashion!</h3>
                     <h1 className="bg-gradient-to-r from-[#030caf] via-[#940404] to-[#02681b]     bg-clip-text text-transparent md:text-4xl sm:text-2xl font-bold mx-auto">{item.title}</h1>
 
-                    <div className="flex justify-center items-center">
-                      <button className="bg-gradient-to-r from-[#006e6e] via-[#00a896] to-[#ab0c0c] text-white border-1 px-3 py-2 rounded-[5px] cursor-pointer">Shop Now</button>
-                    </div>
+                    <button className="bg-red-400 text-white px-6 py-2 rounded-full hover:bg-red-500 transition border-1 cursor-pointer">Shop Now</button>
                   </div>
                   <div className="flex-1">
                     <img src={item.image} className="w-[100%] md:h-[60vh] lg:h-[60vh] sm:h-[60vh] mx-auto dark-drop-shadow-lg hover:scale-105 transition-all" />

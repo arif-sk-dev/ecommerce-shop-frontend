@@ -1,13 +1,22 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+//Layout Components import
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+// Main pages import
 import Home from './pages/home/Home';
 import Shop from './pages/shop/Shop';
 import Blog from './pages/blog/Blog';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
-import Footer from "./components/Footer";
+
+// Support pages import 
+import Faq from "./pages/supportPages/FAQ";
+import Returns from "./pages/supportPages/Returns";
+import Privacy from "./pages/supportPages/Privacy";
+import Terms from "./pages/supportPages/Terms";
+import Error from "./components/Error";
 
 const MainLayout = () => {
   return (
@@ -19,6 +28,15 @@ const MainLayout = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+
+        {/* Support routes */}
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/returns" element={<Returns />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+
+        {/* Error Page */}
+        <Route path="*" element={<Error />} />
       </Routes>
 
       <Footer />

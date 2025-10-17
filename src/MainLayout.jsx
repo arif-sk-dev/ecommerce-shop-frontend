@@ -12,6 +12,7 @@ import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 
 // Support pages import 
+import ScrollToTop from "./utilis/ScrollToTop";
 import FAQ from "./pages/supportPages/FAQ";
 import Returns from "./pages/supportPages/Returns";
 import Privacy from "./pages/supportPages/Privacy";
@@ -21,6 +22,7 @@ import Error from "./components/Error";
 const MainLayout = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop /> 
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

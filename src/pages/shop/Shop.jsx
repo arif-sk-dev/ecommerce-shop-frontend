@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { getData } from './../../context/DataContext';
-// import FilterSection from '../../components/FilterSection';
+import FilterSection from '../../components/FilterSection';
 import Loading from '../../../src/assets/Loading.gif'
 
 const Shop = () => {
@@ -15,7 +15,7 @@ const Shop = () => {
       <div className='max-w-6xl mx-auto px-4 pb-10 mt-20'>
         {
           data?.length > 0 ? (
-            <div className='flex gap-10'>
+            <div className='flex gap-8'>
 
               {/* Filter Section  */}
               <FilterSection />

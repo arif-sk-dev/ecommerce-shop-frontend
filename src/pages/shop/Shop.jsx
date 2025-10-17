@@ -7,10 +7,6 @@ import ProductCard from '../../components/ProductCard';
 const Shop = () => {
   const {data, fetchAllProducts} = getData();
 
-  // useEffect(() => {
-  //   fetchAllProducts();
-  // }, []);
-
   return (
     <section>
       <div className='max-w-6xl mx-auto px-4 pb-10 mt-20'>

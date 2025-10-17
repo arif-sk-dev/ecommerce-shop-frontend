@@ -1,30 +1,3 @@
-// import React from "react";
-
-// const ProductCard = ({ product }) => {
-//   return (
-//     <div className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition duration-300 ease-in-out">
-//       <div className="p-4 flex flex-col items-center">
-//         <img
-//           src={product.image}
-//           alt={product.title}
-//           className="h-40 object-contain mb-4"
-//         />
-//         <h3 className="text-lg font-semibold text-gray-800 text-center line-clamp-2">
-//           {product.title}
-//         </h3>
-//         <p className="text-sm text-gray-500 mt-2">{product.category}</p>
-//         <p className="text-xl font-bold text-green-600 mt-2">${product.price}</p>
-//         <button className="mt-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded hover:scale-105 transition">
-//           Add to Cart
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ProductCard;
-
-
 import React from "react";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
@@ -55,7 +28,8 @@ const ProductCard = ({ product }) => {
         <img
           src={image}
           alt={title}
-          className="h-40 object-contain mb-4 transition-transform hover:scale-105" />
+          className="h-40 object-contain mb-4 transition-transform hover:scale-105"
+        />
         <div className="flex flex-col items-center">
           <h3 className="text-lg font-semibold text-gray-800 text-center line-clamp-2">
             {title}

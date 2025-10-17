@@ -47,13 +47,9 @@ const Contact = () => {
             <p className="text-gray-600">Email: support@shop.com</p>
             <p className="text-gray-600">Phone: +880 1234 567890</p>
           </div>
-          <div>
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">Business Hours</h2>
-            <p className="text-gray-600">Tuesday – Sunday: 10:00 AM – 7:45 PM</p>
 
             {/* Dynamic Status */}
             <BusinessHours />
-          </div>
           <div>
             <h2 className="text-xl font-semibold text-gray-800 mb-2">Location</h2>
             <p className="text-gray-600 mb-4">SHOP HQ, Gulshan Avenue, Dhaka, Bangladesh</p>

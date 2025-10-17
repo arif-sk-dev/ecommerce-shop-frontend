@@ -23,6 +23,14 @@ const FilterSection = () => {
           })
         }
       </div>
+
+      {/* Price range */}
+      <h1 className='mt-5 mb-3 font-semibold text-xl'>Price Range:</h1>
+      <div className='flex flex-col gap-3'>
+        <label htmlFor = "">Price Range: $0 - $5000</label>
+        <input type="range" name="" />
+      </div>
+      <button className="my-3 bg-red-400 text-white px-6 py-2 rounded-md hover:bg-red-500 transition cursor-pointer">Reset Filters</button>
     </div>
   )
 }

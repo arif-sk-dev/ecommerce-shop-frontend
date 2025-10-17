@@ -1,5 +1,6 @@
 import React from "react";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import { FaCartPlus } from "react-icons/fa6";
 
 const ProductCard = ({ product }) => {
   const { title, price, description, category, image, rating } = product;
@@ -41,8 +42,8 @@ const ProductCard = ({ product }) => {
           <div className="flex items-center gap-1 mt-2">{renderStars()}</div>
           <p className="text-xl font-bold text-green-600 mt-2">${price}</p>
         </div>
-        <button className="mt-4 bg-zinc-100 text-black px-4 py-2 rounded hover:bg-zinc-300 transition cursor-pointer">
-          Add to Cart
+        <button className="mt-4 bg-zinc-100 text-black px-4 py-2 rounded hover:bg-zinc-300 transition cursor-pointer flex gap-2 items-center justify-center">
+          <span><FaCartPlus /></span> Add to Cart
         </button>
       </div>
     </div>

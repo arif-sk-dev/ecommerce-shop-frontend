@@ -9,7 +9,7 @@ const Shop = () => {
 
   return (
     <section>
-      <div className='max-w-6xl mx-auto px-4 pb-10 mt-20'>
+      <div className='max-w-7xl mx-auto px-4 pb-10 mt-20'>
         {
           data?.length > 0 ? (
             <div className='flex gap-8 md:flex-row lg:flex-row flex-col'>

@@ -1,16 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { getData } from "../context/DataContext";
 
 const Category = () => {
-  const { data } = getData();
-
-  const getUniqueCategory = (data, property) => {
-    const values = data?.map((curElem) => curElem[property]);
-    const uniqueValues = [...new Set(values)];
-    return uniqueValues;
-  };
-
-  const categoryOnlyData = getUniqueCategory(data, "category");
+  const { categoryOnlyData } = getData();
 
   return (
     <div>

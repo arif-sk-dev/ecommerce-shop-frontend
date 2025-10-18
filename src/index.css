@@ -28,3 +28,10 @@
 .slick-dots li {
     margin: 0 4px;
 }
+
+input {
+  accent-color: red;
+  color: #333;
+  border: 1px solid #ccc;
+}
+

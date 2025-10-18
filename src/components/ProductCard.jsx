@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out overflow-hidden cursor-pointer">
-      <div className="p-4 flex flex-col justify-between h-full">
+      <div className="p-4 flex flex-col justify-between h-full border-[1px] border-zinc-100 rounded-[5px]">
         <img
           src={image}
           alt={title}

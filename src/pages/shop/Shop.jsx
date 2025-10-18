@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getData } from './../../context/DataContext';
 import FilterSection from '../../components/FilterSection';
 import Loading from '../../../src/assets/Loading.gif'
@@ -6,6 +6,25 @@ import ProductCard from '../../components/ProductCard';
 
 const Shop = () => {
   const {data, fetchAllProducts} = getData();
+
+  // For Filter Component
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("All");
+  const [priceRange, setPriceRange] = useState([0, 5000]);
+
+
+  useEffect(()=> {
+    fetchAllProducts()
+  }, []);
+
+  const handleCategoryChange = (e)=> {
+    setCategory(e.target.value);
+  }
+
+  const filteredData = data?.filter((item)=>
+  item.title.toLowerCase().includes(search.toLowerCase()) &&
+(category === "All" || item.category === category) &&
+item.price >= priceRange[0] && item.price <= priceRange[1]);
 
   return (
     <section>
@@ -15,12 +34,12 @@ const Shop = () => {
             <div className='flex gap-8 md:flex-row lg:flex-row flex-col'>
 
               {/* Filter Section  */}
-              <FilterSection />
+            <FilterSection search={search} setSearch= {setSearch} category={category} setCategory={setCategory} priceRange={priceRange} setPriceRange={setPriceRange} handleCategoryChange={handleCategoryChange} />
 
               {/* Product Section  */}
               <div className='grid gap-4 md:grid-cols-4 lg:grid-cols-4 grid-cols-1 '>
                 {
-                  data?.map((product, index)=> {
+                  filteredData?.map((product, index)=> {
                     return <ProductCard key={index} product={product} />
                   })
                 }

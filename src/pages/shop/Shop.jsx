@@ -47,7 +47,7 @@ const Shop = () => {
             />
 
             {/* Product Section  */}
-            <div className="grid gap-4 md:grid-cols-4 lg:grid-cols-4 grid-cols-1 ">
+            <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4 grid-cols-1 ">
               {filteredData?.map((product, index) => {
                 return <ProductCard key={index} product={product} />;
               })}

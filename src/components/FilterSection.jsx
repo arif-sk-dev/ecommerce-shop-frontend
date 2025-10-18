@@ -8,7 +8,7 @@ const FilterSection = ({search, setSearch, category, setCategory, priceRange, se
   const categories = ['All', ...categoryOnlyData];
 
   return (
-    <div className='bg-zinc-50 p-4 rounded-md h-max sm:w-[300px] md:min-w-[220px] lg:min-w-[220px]'>
+    <div className='bg-zinc-50 p-4 rounded-md h-max sm:w-[300px] md: min-w-[250px] lg:min-w-[220px]'>
       <input type='text' placeholder='Search...'
       value={search}
       onChange={(e)=>setSearch(e.target.value)}
@@ -39,7 +39,9 @@ const FilterSection = ({search, setSearch, category, setCategory, priceRange, se
         <input type="range" name="" id="" value={priceRange[1]}
         onChange={(e)=>setPriceRange([priceRange[0], Number(e.target.value)])} />
       </div>
-      <button className="my-3 bg-red-400 text-white px-6 py-2 rounded-md hover:bg-red-500 transition cursor-pointer">Reset Filters</button>
+      <button className="my-3 bg-red-400 text-white px-6 py-2 rounded-md hover:bg-red-500 transition cursor-pointer"
+      onClick={()=> {setSearch(''); setCategory('All'); setPriceRange([0, 5000])}}>
+        Reset Filters</button>
     </div>
   )
 }

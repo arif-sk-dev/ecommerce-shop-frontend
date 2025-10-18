@@ -16,7 +16,7 @@ const FilterSection = ({
   const categories = ["All", ...categoryOnlyData];
 
   return (
-    <div className="bg-zinc-50 p-4 rounded-md h-max sm:w-[300px] md: min-w-[250px] lg:min-w-[220px]">
+    <div className="bg-zinc-50 p-4 rounded-md h-max sm:w-[300px] md:min-w-[220px] lg:min-w-[220px]">
       <input
         type="text"
         placeholder="Search..."
@@ -52,6 +52,8 @@ const FilterSection = ({
         </label>
         <input
           type="range"
+          min={0}
+          max={5000}
           name=""
           id=""
           value={priceRange[1]}
@@ -76,4 +78,3 @@ const FilterSection = ({
 
 export default FilterSection;
 
-// .slice(page * 10 - 10, page * 10)

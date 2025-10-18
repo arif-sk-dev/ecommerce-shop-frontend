@@ -42,7 +42,6 @@ const Shop = () => {
     <section>
       <div className="max-w-7xl mx-auto px-4 pb-10 mt-20">
         {data?.length > 0 ? (
-          // <>
           <div className="flex gap-8 md:flex-row lg:flex-row flex-col">
             {/* Filter Section  */}
             <FilterSection
@@ -57,18 +56,26 @@ const Shop = () => {
 
             {/* Product Section  */}
             <div className="flex flex-col">
-              <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4 grid-cols-1 ">
-                {filteredData
-                  ?.slice((page - 1) * 10, page * 10)
-                  .map((product, index) => {
-                    return <ProductCard key={index} product={product} />;
-                  })}
-              </div>
-              <Pagination
-                pageHandler={pageHandler}
-                page={page}
-                dynamicPage={dynamicPage}
-              />
+              {filteredData?.length === 0 ? (
+                <div className="flex justify-center items-center max-w-[500px] mx-auto text-zinc-500 italic text-xl py-10">
+                  No products matching your filters.
+                </div>
+              ) : (
+                <>
+                  <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4 grid-cols-1 ">
+                    {filteredData
+                      ?.slice((page - 1) * 10, page * 10)
+                      .map((product, index) => {
+                        return <ProductCard key={index} product={product} />;
+                      })}
+                  </div>
+                  <Pagination
+                    pageHandler={pageHandler}
+                    page={page}
+                    dynamicPage={dynamicPage}
+                  />
+                </>
+              )}
             </div>
           </div>
         ) : (
